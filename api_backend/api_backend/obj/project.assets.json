@@ -6304,11 +6304,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\MY LAP\\source\\repos\\api_backend\\api_backend\\api_backend.csproj",
+      "projectUniqueName": "C:\\Users\\MY LAP\\Source\\Repos\\React_Project\\api_backend\\api_backend\\api_backend.csproj",
       "projectName": "api_backend",
-      "projectPath": "C:\\Users\\MY LAP\\source\\repos\\api_backend\\api_backend\\api_backend.csproj",
+      "projectPath": "C:\\Users\\MY LAP\\Source\\Repos\\React_Project\\api_backend\\api_backend\\api_backend.csproj",
       "packagesPath": "C:\\Users\\MY LAP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\MY LAP\\source\\repos\\api_backend\\api_backend\\obj\\",
+      "outputPath": "C:\\Users\\MY LAP\\Source\\Repos\\React_Project\\api_backend\\api_backend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\MY LAP\\AppData\\Roaming\\NuGet\\NuGet.Config",

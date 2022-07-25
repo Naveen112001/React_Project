@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "1cPV2Xjni7A/Bl2hE173tCQ+7vLlwtRc36eVzlenOCXPcjWMWyymAufk80Z9RPGXHfFWkzsw7g9ZBRdZSF2Www==",
+  "dgSpecHash": "TFnl0Y6E4z9SnrRj/kpprIbhJo6je1ClHAlp6Fzc2RnALg4O8i65o7rP1mKH1OpWcrQICXX4901LUlzfOgY4KQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\MY LAP\\source\\repos\\api_backend\\api_backend\\api_backend.csproj",
+  "projectFilePath": "C:\\Users\\MY LAP\\Source\\Repos\\React_Project\\api_backend\\api_backend\\api_backend.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\MY LAP\\.nuget\\packages\\entityframework\\6.4.4\\entityframework.6.4.4.nupkg.sha512",
     "C:\\Users\\MY LAP\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
