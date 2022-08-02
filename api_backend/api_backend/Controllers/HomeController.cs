@@ -291,6 +291,45 @@ namespace api_backend.Controllers
 
             return NoContent();
         }
+        [Route("Books/Getbyname/{name}")]
+        [HttpGet]
+        public async Task<ActionResult<Book>> searchBook( string name) {
+            Book c;
+            int n;
+            bool isNumeric = int.TryParse(name, out n);
+            if (isNumeric)
+            {
+                c = await _context.Books.FindAsync(n);
+                return c;
+            }
+            else
+            {
+                var bookname = _context.Books.Select(x => x.BookName).ToList<string>();
+                foreach (string bname in bookname)
+                {
+                    string trimmed = String.Concat(name.Where(c => !Char.IsWhiteSpace(c)));
+                    string bname1 = String.Concat(bname.Where(c => !Char.IsWhiteSpace(c)));
+                    if (bname.Equals(name, StringComparison.OrdinalIgnoreCase))
+                    {
+
+                        c = await _context.Books.Where(x => x.BookName == bname).FirstOrDefaultAsync();
+                        return c;
+                    }
+                    else if(trimmed.Equals(bname1, StringComparison.OrdinalIgnoreCase))
+                    {
+                        c = await _context.Books.Where(x => x.BookName == bname).FirstOrDefaultAsync();
+                        return c;
+                    }
+
+                }
+            }
+      
+            
+                return NotFound();
+            
+
+
+        }
         //Administrators
         [Route("Administrator/{UserId}")]
         [HttpGet]
