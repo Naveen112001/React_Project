@@ -1,3 +1,4 @@
+
 ﻿using api_backend.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
@@ -160,7 +161,7 @@ namespace api_backend.Controllers
             var q = await _context.Students.Where(x => x.StudentId == StudentId).FirstOrDefaultAsync();
            if (q == null)
             {
-                return BadRequest();
+                return NotFound();
             }
             return q;
         }
@@ -208,6 +209,31 @@ namespace api_backend.Controllers
             if (student == null)
             {
                 return NotFound();
+            }
+
+            _context.Students.Remove(student);
+            await _context.SaveChangesAsync();
+
+            return NoContent();
+        }
+        [Route("Student/Delete/{id}")]
+        [HttpDelete]
+        public async Task<IActionResult> Studentdelete(string id)
+        {
+            
+            var student = await _context.Students.Where(x=>x.StudentId==id).FirstOrDefaultAsync();
+           
+            if (student == null)
+            {
+                return NotFound();
+            }
+            else if (BookExists(student.BookId))
+            {
+                var books= await _context.Books.Where(x => x.BookId == student.BookId).FirstOrDefaultAsync();
+                books.count++;
+                _context.Books.Update(books);
+                _context.Entry(books).State = EntityState.Modified;
+
             }
 
             _context.Students.Remove(student);
